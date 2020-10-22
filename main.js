@@ -9,25 +9,15 @@ function createWindow() {
     height: 600,
     frame: false,
     titleBarStyle: 'hiddenInset',
-  })
-
-  const view = new BrowserView({
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
   })
-  mainWindow.setBrowserView(view)
-  view.setBounds({ x: 0, y: 0, width: 800, height: 600 })
-  view.setAutoResize({ width: true, height: true })
-  view.webContents.loadFile('index.html')
 
-  // Potential workaround:
-  const header = `data:text/html;charset=utf-8,<body style="height: 34px; -webkit-user-select: none; -webkit-app-region: drag;"></body>`
-  mainWindow.webContents.loadURL(header)
+  mainWindow.webContents.loadFile('index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
-  // view.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
