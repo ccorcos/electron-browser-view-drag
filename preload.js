@@ -9,4 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
+
+  // https://www.electronjs.org/docs/api/frameless-window#draggable-region
+  const div = document.getElementById('drag')
+  div.style.height = '34px'
+  div.style.webkitAppRegion = 'drag'
+  div.style.webkitUserSelect = 'none'
 })
