@@ -21,6 +21,10 @@ function createWindow() {
   view.setAutoResize({ width: true, height: true })
   view.webContents.loadFile('index.html')
 
+  // Potential workaround:
+  const header = `data:text/html;charset=utf-8,<body style="height: 34px; -webkit-user-select: none; -webkit-app-region: drag;"></body>`
+  mainWindow.webContents.loadURL(header)
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
   // view.webContents.openDevTools()
