@@ -13,3 +13,10 @@ There's a workaround by injecting into the main window's webContents but there's
 git checkout webview-workaround
 npm start
 ```
+
+We can also verify that the base-case works just fine when not using a BrowserView at all.
+
+```
+git checkout base-case
+npm start
+```
