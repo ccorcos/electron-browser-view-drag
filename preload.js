@@ -20,4 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
   div.style.webkitAppRegion = 'drag'
   div.style.webkitUserpointSelect = 'none'
   div.style.pointerEvents = 'none'
+
+  document.querySelector('button').onclick = () => alert('hello')
 })
