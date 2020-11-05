@@ -12,7 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // https://www.electronjs.org/docs/api/frameless-window#draggable-region
   const div = document.getElementById('drag')
-  div.style.height = '34px'
+  div.style.height = '200px'
+  div.style.position = 'absolute'
+  div.style.top = '0px'
+  div.style.left = '0px'
+  div.style.right = '0px'
   div.style.webkitAppRegion = 'drag'
-  div.style.webkitUserSelect = 'none'
+  div.style.webkitUserpointSelect = 'none'
+  div.style.pointerEvents = 'none'
 })
