@@ -18,7 +18,7 @@ function createWindow() {
 
   const search = new BrowserView()
   mainWindow.addBrowserView(search)
-  search.setBounds({ x: 400, y: 100, width: 100, height: 30 })
+  search.setBounds({ x: 400, y: 100, width: 100, height: 45 })
   search.setAutoResize({ horizontal: true, vertical: false })
   search.webContents.loadFile('search.html')
 

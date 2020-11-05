@@ -9,17 +9,4 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
-
-  // https://www.electronjs.org/docs/api/frameless-window#draggable-region
-  const div = document.getElementById('drag')
-  div.style.height = '100px'
-  div.style.position = 'absolute'
-  div.style.top = '0px'
-  div.style.left = '0px'
-  div.style.right = '0px'
-  div.style.webkitAppRegion = 'drag'
-  div.style.webkitUserpointSelect = 'none'
-  div.style.pointerEvents = 'none'
-
-  document.querySelector('button').onclick = () => alert('hello')
 })
