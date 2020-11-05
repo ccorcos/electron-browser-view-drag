@@ -16,6 +16,12 @@ function createWindow() {
 
   mainWindow.webContents.loadFile('index.html')
 
+  const search = new BrowserView()
+  mainWindow.addBrowserView(search)
+  search.setBounds({ x: 400, y: 100, width: 100, height: 30 })
+  search.setAutoResize({ horizontal: true, vertical: false })
+  search.webContents.loadFile('search.html')
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
